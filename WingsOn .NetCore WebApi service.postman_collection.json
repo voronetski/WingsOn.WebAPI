@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "c984ae4c-7347-45fe-beca-9a4f769dd58d",
+		"name": "WingsOn .NetCore WebApi service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getPassengersByFlight",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44314/api/booking/getPassengersByFlight",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"booking",
+						"getPassengersByFlight"
+					]
+				},
+				"description": "Endpoint that returns all passengers on the flight ‘PZ696’."
+			},
+			"response": []
+		},
+		{
+			"name": "getPassengerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44314/api/v1/passengers/get/91",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"v1",
+						"passengers",
+						"get",
+						"91"
+					]
+				},
+				"description": "Endpoint that returns a Person by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "createBooking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Kendall Velazquez Jr.\",\n\"dateBirth\":\"09/24/1980\",\n\"gender\":\"Male\",\n\"address\":\"806-1408 Mi Rd.\",\n\"email\":\"aegestas.a.dui@aliquet.ca\",\n\"id\":911}\n"
+				},
+				"url": {
+					"raw": "https://localhost:44314/api/v1/bookings/add/flights/PZ696/passengers/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"v1",
+						"bookings",
+						"add",
+						"flights",
+						"PZ696",
+						"passengers",
+						"add"
+					]
+				},
+				"description": "BONUS: Endpoint that creates a booking of an existing flight for a new passenger"
+			},
+			"response": []
+		},
+		{
+			"name": "updateAddress",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"new address\"\n"
+				},
+				"url": {
+					"raw": "https://localhost:44314/api/v1/passengers/91/address/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"v1",
+						"passengers",
+						"91",
+						"address",
+						"update"
+					]
+				},
+				"description": "BONUS: Endpoint that updates passenger’s address"
+			},
+			"response": []
+		},
+		{
+			"name": "getMalePassengers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44314/api/v1/passengers/gender/male",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"v1",
+						"passengers",
+						"gender",
+						"male"
+					]
+				},
+				"description": "Endpoint that lists all the male passengers"
+			},
+			"response": []
+		},
+		{
+			"name": "updateAddress",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"new address\""
+				},
+				"url": {
+					"raw": "https://localhost:44314/api/v1/passengers/91/address/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"v1",
+						"passengers",
+						"91",
+						"address",
+						"update"
+					]
+				},
+				"description": "BONUS: Endpoint that updates passenger’s address"
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmailAddress",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"maxim_voronetski@epam.com\""
+				},
+				"url": {
+					"raw": "https://localhost:44314/api/v1/passengers/get/91/email/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"v1",
+						"passengers",
+						"get",
+						"91",
+						"email",
+						"update"
+					]
+				},
+				"description": "BONUS: Endpoint that updates passenger’s email address."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

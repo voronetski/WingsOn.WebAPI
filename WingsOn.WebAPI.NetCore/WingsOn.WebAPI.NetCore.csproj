@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WingsOn.Dal\WingsOn.Dal.csproj" />
+    <ProjectReference Include="..\WingsOn.Domain\WingsOn.Domain.csproj" />
+    <ProjectReference Include="..\WingsOn.WebAPI.NetCore.DTO\WingsOn.WebAPI.NetCore.DTO.csproj" />
+    <ProjectReference Include="..\WingsOn.WEbAPI.NetCore.Services\WingsOn.WebAPI.NetCore.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>
